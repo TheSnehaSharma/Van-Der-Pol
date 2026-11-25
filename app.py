@@ -15,7 +15,8 @@ st.title("Van der Pol Oscillator Simulator")
 class VDPModel(nn.Module):
     def __init__(self):
         super().__init__()
-        self.network = nn.Sequential(
+
+        self.net = nn.Sequential(
             nn.Linear(4, 64),
             nn.Tanh(),
             nn.Linear(64, 64),
@@ -28,7 +29,7 @@ class VDPModel(nn.Module):
         )
 
     def forward(self, x):
-        return self.network(x)
+        return self.net(x)
 
 
 # Load model and scalers from repository root
