@@ -42,8 +42,8 @@ def load_model():
     )
     model.eval()
 
-    input_scaler = joblib.load("input_scaler.pkl")
-    output_scaler = joblib.load("output_scaler.pkl")
+    input_scaler = joblib.load("scaler_input.pkl")
+    output_scaler = joblib.load("scaler_output.pkl")
 
     return model, input_scaler, output_scaler
 
