@@ -37,7 +37,7 @@ def load_model():
     model = VDPModel()
 
     model.load_state_dict(
-        torch.load("vdp_surrogate.pth", map_location="cpu", weights_only=True)
+        torch.load("van_der_pol_surrogate.pth", map_location="cpu", weights_only=True)
     )
     model.eval()
 
